@@ -6,7 +6,7 @@
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:56:50 by mmousson          #+#    #+#             */
-/*   Updated: 2018/11/09 08:03:15 by mmousson         ###   ########.fr       */
+/*   Updated: 2018/11/09 08:09:10 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		|| !(new->content = malloc(sizeof(content_size))))
 	{
 		if (new)
-			free(NULL);
+			free(new);
 		return (NULL);
 	}
 		
