@@ -1,2 +1,3 @@
+*.o
 ccc-analyzer
 scan-libft
