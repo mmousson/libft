@@ -6,7 +6,7 @@
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:56:50 by mmousson          #+#    #+#             */
-/*   Updated: 2018/11/09 08:33:29 by mmousson         ###   ########.fr       */
+/*   Updated: 2018/11/09 08:36:05 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 			free(new);
 		return (NULL);
 	}
-		
 	if (content)
 	{
 		ft_memcpy(new->content, content, content_size);
