@@ -47,8 +47,6 @@ SRC =	ft_memset.c \
 		ft_putstr.c \
 		ft_putendl.c \
 		ft_putnbr.c \
-		ft_putllong.c \
-		ft_putfloat.c \
 		ft_memalloc.c \
 		ft_memdel.c \
 		ft_strnew.c \
@@ -69,15 +67,17 @@ SRC =	ft_memset.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_stradd.c \
-		ft_strmultiply.c \
-		ft_rotate_left.c \
 		ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_rotate_left.c \
+		ft_stradd.c \
+		ft_strmultiply.c \
+		ft_putllong.c \
+		ft_putfloat.c \
 		ft_min.c \
 		ft_max.c \
 		ft_abs.c \
