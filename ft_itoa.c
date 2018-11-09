@@ -6,7 +6,7 @@
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 06:45:12 by mmousson          #+#    #+#             */
-/*   Updated: 2018/11/09 07:41:19 by mmousson         ###   ########.fr       */
+/*   Updated: 2018/11/09 08:40:14 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ char			*ft_itoa(int n)
 	j = ft_mag((n >= 0) ? n : -n);
 	if (!(num = (char *)malloc(sizeof(char) * j + (n < 0 ? 2 : 1))))
 		return (NULL);
-	ft_bzero(num, j + (n < 0 ? 2 : 1));
 	if (n < 0)
 	{
 		num[i] = '-';
