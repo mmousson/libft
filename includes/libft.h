@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 02:11:28 by mmousson          #+#    #+#             */
-/*   Updated: 2018/11/08 23:10:49 by mmousson         ###   ########.fr       */
+/*   Updated: 2019/03/05 16:20:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,9 @@
 # include <stdlib.h>
 # include <string.h>
 
-# define E 2.7182818284590451
-# define INT_MAX 2147483647
-# define INT_MIN -2147483648
-# define LLONG_MAX  9223372036854775807LL
-# define LLONG_MIN -9223372036854775807LL
-# define FLOAT_MIN 0.000000f
-# define FLOAT_MAX 340282346638528859811704183484516925440.000000f
+# define BUFF_SIZE 1664
 
+char				*ft_strapp(char *str, char c);
 void				ft_putchar(int c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
@@ -36,6 +31,7 @@ void				ft_bzero(void *s, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
+int					ft_isxdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
@@ -57,6 +53,7 @@ size_t				ft_strlcat(char *dest, const char *src, size_t size);
 char				*ft_strchr(const char *str, int c);
 char				*ft_strrchr(const char *str, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
+char				*ft_strrstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
@@ -85,8 +82,11 @@ char				*ft_stradd(char *addend1, char *addend2,
 						short rm_front_zeros);
 char				*ft_strmultiply(char *factor1, char *factor2,
 						short rm_front_zeros);
+char				*ft_strdivide_two(char *str);
 void				*ft_rotate_left(void *array, size_t array_size, size_t n,
 						size_t data_size);
+int					get_next_line(const int fd, char **line);
+int					ft_strendswith(char *str, const char *end);
 
 typedef	struct		s_list
 {
@@ -101,10 +101,12 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_lstpush(t_list **alst, t_list *new);
 
 int					ft_abs(int x);
 int					ft_min(int x, int y);
 int					ft_max(int x, int y);
 int					ft_clamp(int x, int low, int high);
+double				ft_fabs(double x);
 
 #endif

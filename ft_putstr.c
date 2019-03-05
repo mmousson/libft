@@ -6,7 +6,7 @@
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 01:10:16 by mmousson          #+#    #+#             */
-/*   Updated: 2018/11/06 01:10:17 by mmousson         ###   ########.fr       */
+/*   Updated: 2019/02/16 02:09:11 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr(char const *s)
 {
+	if (s == NULL)
+		return ;
 	write(1, s, ft_strlen((char *)s));
 }

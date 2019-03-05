@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstpush.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 01:40:24 by mmousson          #+#    #+#             */
-/*   Updated: 2019/02/12 10:30:57 by mmousson         ###   ########.fr       */
+/*   Created: 2018/11/13 02:18:20 by mmousson          #+#    #+#             */
+/*   Updated: 2018/11/15 05:32:33 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_lstpush(t_list **alst, t_list *new)
 {
-	size_t	size;
-	void	*dup;
+	t_list *current;
 
-	if (s == NULL)
-		return (NULL);
-	size = ft_strlen(s) + 1;
-	dup = malloc(size);
-	if (dup == NULL)
-		return (NULL);
-	return ((char *)ft_memcpy(dup, s, size));
+	if (alst && new)
+	{
+		if (!*alst)
+			*alst = new;
+		else
+		{
+			current = *alst;
+			while (current->next)
+				current = current->next;
+			current->next = new;
+		}
+	}
 }

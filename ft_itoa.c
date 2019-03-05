@@ -6,7 +6,7 @@
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 06:45:12 by mmousson          #+#    #+#             */
-/*   Updated: 2018/11/09 08:41:34 by mmousson         ###   ########.fr       */
+/*   Updated: 2018/11/22 06:49:51 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char			*ft_itoa(int n)
 	int		j;
 	char	*num;
 
-	if (n == INT_MIN)
+	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	i = 0;
 	j = ft_mag((n >= 0) ? n : -n);

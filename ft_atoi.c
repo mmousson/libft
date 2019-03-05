@@ -6,7 +6,7 @@
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 00:23:28 by mmousson          #+#    #+#             */
-/*   Updated: 2018/11/08 06:41:54 by mmousson         ###   ########.fr       */
+/*   Updated: 2019/02/19 13:59:47 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_atoi(const char *s)
 	int				neg;
 	long long int	res;
 
+	if (s == NULL)
+		return (0);
 	neg = 1;
 	res = 0;
 	while (*s == 32 || (*s >= 9 && *s <= 13))

@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isxdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmousson <mmousson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 01:40:24 by mmousson          #+#    #+#             */
-/*   Updated: 2019/02/12 10:30:57 by mmousson         ###   ########.fr       */
+/*   Created: 2019/02/09 04:28:38 by mmousson          #+#    #+#             */
+/*   Updated: 2019/02/19 20:42:06 by mmousson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strdup(const char *s)
+int	ft_isxdigit(int c)
 {
-	size_t	size;
-	void	*dup;
-
-	if (s == NULL)
-		return (NULL);
-	size = ft_strlen(s) + 1;
-	dup = malloc(size);
-	if (dup == NULL)
-		return (NULL);
-	return ((char *)ft_memcpy(dup, s, size));
+	return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f')
+		|| (c >= 'A' && c <= 'F'));
 }
